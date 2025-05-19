@@ -1,0 +1,22 @@
+fastapi
+uvicorn[standard]
+sqlalchemy[asyncio]
+asyncpg
+psycopg2-binary 
+pydantic[email]
+passlib[bcrypt]
+python-jose[cryptography]
+python-multipart 
+celery
+redis
+pandas
+tensorflow 
+keras # Keras 3
+keras-rs
+scikit-learn 
+python-dotenv
+alembic
+black
+isort 
+
+
