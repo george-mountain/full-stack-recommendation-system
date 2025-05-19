@@ -1,6 +1,118 @@
-### Project Structure
 
-#### Backend API structure
+
+<a name="readme-top"></a>
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <h3 align="center">Full Stack Recommendation System</h3>
+
+  <p align="center">
+    A complete movie recommendation system with React frontend and FastAPI backend
+    <br />
+    <a href="https://github.com/george-mountain/full-stack-recommendation-system"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="http://localhost:5173/">View Demo</a>
+    ·
+    <a href="https://github.com/george-mountain/full-stack-recommendation-system/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/george-mountain/full-stack-recommendation-system/issues">Request Feature</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#project-structure">Project Structure</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+This project is a full-stack movie recommendation system featuring:
+
+- React-based frontend with responsive UI
+- FastAPI backend with GRU4Rec recommendation model
+- User authentication and rating system
+- Admin interface for content management
+- Scheduled model retraining with Celery
+
+The system provides personalized movie recommendations based on user ratings and behavior.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+* [![FastAPI][FastAPI-shield]][FastAPI-url]
+* [![React][React.js]][React-url]
+* [![Postgres][Postgres-shield]][Postgres-url]
+* [![Docker][Docker-shield]][Docker-url]
+* [![Celery][Celery-shield]][Celery-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+- Docker and Docker Compose
+- Node.js (for frontend development)
+- Python 3.8+ (for backend development)
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/george-mountain/full-stack-recommendation-system.git
+   ```
+2. Copy environment file
+   ```sh
+   cp .env.example .env
+   ```
+3. Start the backend API container
+   ```sh
+   docker compose up --build
+   ```
+4. Populate the database with movie data
+   ```sh
+   docker compose exec app python /app/scripts/seed_db.py
+   ```
+5. Navigate to frontend and install dependencies
+   ```sh
+   cd recommendation-frontend/
+   npm install
+   npm run dev
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- PROJECT STRUCTURE -->
+## Project Structure
+
+### Backend API Structure
+```
 .
 ├── app/
 │   ├── __init__.py
@@ -53,10 +165,10 @@
 ├── docker-compose.yml
 ├── requirements.txt
 └── .env_example                  # Example environment variables
+```
 
-
-
-#### Fronted structure
+### Frontend Structure
+```
 recommendation-frontend/
 ├── node_modules/
 ├── public/
@@ -105,78 +217,56 @@ recommendation-frontend/
     |
     └── styles/
         ├── index.css
-        
-
-
-### Setup the configurations
-
-```bash
-cp .env.example .env
 ```
 
-#### Start the backend API container
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```bash
+<!-- USAGE -->
+## Usage
 
-docker compose up --buiild 
+After installation, access the services via:
 
-```
+- Backend API docs: http://127.0.0.1:8000/docs
+- Frontend: http://localhost:5173/
+- PGAdmin: http://localhost:5050/ (credentials: admin@admin.com / admin1234)
 
-or using Makefile
+**Admin Access:**
+1. Register with email: `admin@example.com`
+2. Login and access the admin page
+3. Manage movies and retrain the recommendation model
 
-```bash
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-make build
+<!-- LICENSE -->
+## License
 
-```
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-#### Run data population script
+<!-- CONTACT -->
+## Contact
 
-Run the command below to populate your database with movie lens dataset. You will need this for the intial model training.
+Project Link: [https://github.com/george-mountain/full-stack-recommendation-system](https://github.com/george-mountain/full-stack-recommendation-system)
 
-```bash
-docker compose exec app python /app/scripts/seed_db.py
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```
-
-#### Start Frontend service
-
-Navigate to the frontend folder;
-
-```bash
-cd recommendation-frontend/
-
-```
-
-Install the necessary dependencies
-
-```bash
-npm install
-
-```
-
-Run the frontend app
-
-```bash
-npm run dev
-```
-
-#### Access Service Endpoints
-Access the services via the following endpoints
-
-Backend api: http://127.0.0.1:8000/docs
-
-Frontend: http://localhost:5173/
-
-PGADMIN: http://localhost:5050/  
-
-default credentials to login to PGADMIN unless changed:
-email: admin@admin.com
-password: admin1234
-
-#### Accessing Frontend as Admin Users:
-
-In the frontend, register as an admin with the email: `admin@example.com`. Then, login with this user. Go to the admin page.
-
-In the admin page, you can upload movies, you can retrain the recommendation system model etc.
+<!-- MARKDOWN LINKS & IMAGES -->
+[forks-shield]: https://img.shields.io/github/forks/george-mountain/full-stack-recommendation-system.svg?style=for-the-badge
+[forks-url]: https://github.com/george-mountain/full-stack-recommendation-system/network/members
+[stars-shield]: https://img.shields.io/github/stars/george-mountain/full-stack-recommendation-system.svg?style=for-the-badge
+[stars-url]: https://github.com/george-mountain/full-stack-recommendation-system/stargazers
+[issues-shield]: https://img.shields.io/github/issues/george-mountain/full-stack-recommendation-system.svg?style=for-the-badge
+[issues-url]: https://github.com/george-mountain/full-stack-recommendation-system/issues
+[license-shield]: https://img.shields.io/github/license/george-mountain/full-stack-recommendation-system.svg?style=for-the-badge
+[license-url]: https://github.com/george-mountain/full-stack-recommendation-system/blob/master/LICENSE.txt
+[FastAPI-shield]: https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi
+[FastAPI-url]: https://fastapi.tiangolo.com/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Postgres-shield]: https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white
+[Postgres-url]: https://www.postgresql.org/
+[Docker-shield]: https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white
+[Docker-url]: https://www.docker.com/
+[Celery-shield]: https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white
+[Celery-url]: https://docs.celeryq.dev/
