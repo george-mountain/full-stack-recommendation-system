@@ -5,10 +5,10 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Full Stack Recommendation System</h3>
+  <h3 align="center">Full Stack Machine Learning Recommendation System</h3>
 
   <p align="center">
-    A complete movie recommendation system with React frontend and FastAPI backend
+    A complete ML movie recommendation system with React frontend and FastAPI backend
     <br />
     <a href="https://github.com/george-mountain/full-stack-recommendation-system"><strong>Explore the docs »</strong></a>
     <br />
@@ -51,7 +51,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is a full-stack movie recommendation system featuring:
+This project is a full-stack Machine Learning movie recommendation system featuring:
 
 - React-based frontend with responsive UI
 - FastAPI backend with GRU4Rec recommendation model
@@ -59,7 +59,7 @@ This project is a full-stack movie recommendation system featuring:
 - Admin interface for content management
 - Scheduled model retraining with Celery
 
-The system provides personalized movie recommendations based on user ratings and behavior.
+The system provides personalized movie recommendations based on user ratings and behavior with the help of machine learning model.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
