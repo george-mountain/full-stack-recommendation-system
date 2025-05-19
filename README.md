@@ -32,6 +32,9 @@
       </ul>
     </li>
     <li>
+      <a href="#system-architecture">System Architecture</a>
+    </li>
+    <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
@@ -67,6 +70,23 @@ The system provides personalized movie recommendations based on user ratings and
 * [![Postgres][Postgres-shield]][Postgres-url]
 * [![Docker][Docker-shield]][Docker-url]
 * [![Celery][Celery-shield]][Celery-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SYSTEM ARCHITECTURE -->
+## System Architecture
+
+<div align="center">
+  <img src="./images/highlevel systm architecture recommendation system.png" alt="High-level System Architecture of Recommendation System" width="800">
+</div>
+
+The architecture diagram above illustrates the main components of the recommendation system:
+1. **Frontend**: React-based user interface
+2. **Backend**: FastAPI server handling requests
+3. **Database**: PostgreSQL for data persistence
+4. **Recommendation Engine**: GRU4Rec model for personalized recommendations
+5. **Celery Worker**: Background tasks for model training
+6. **Redis**: Message broker for task queue
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
