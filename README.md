@@ -77,7 +77,7 @@ The system provides personalized movie recommendations based on user ratings and
 ## System Architecture
 
 <div align="center">
-  <img src="./images/highlevel systm architecture recommendation system.png" alt="High-level System Architecture of Recommendation System" width="800">
+  <img src="./images/highlevel_system_architecture.png" alt="High-level System Architecture of Recommendation System" width="800">
 </div>
 
 The architecture diagram above illustrates the main components of the recommendation system:
