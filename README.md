@@ -90,6 +90,9 @@ The architecture diagram above illustrates the main components of the recommenda
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+[video_demo_rec_system.webm](https://github.com/user-attachments/assets/f0e759f9-a774-4cc6-ac8e-fdf041a82bc9)
+
+
 <!-- GETTING STARTED -->
 ## Getting Started
 
